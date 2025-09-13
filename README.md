@@ -13,7 +13,7 @@ A modern web application that uses AI to generate personalized summaries of long
 
 ### 🤖 AI-Powered Backend
 - **FastAPI** - Modern Python web framework
-- **OpenAI GPT-4** - Advanced text summarization
+- **Facebook BART Model (Hugging Face Transformer)** - State-of-the-art text summarization
 - **Customizable Output** - Tone, length, and purpose options
 - **Error Handling** - Comprehensive error management
 
@@ -34,7 +34,7 @@ start-sumai.bat
 **1. Start Backend:**
 ```bash
 cd Backend
-start-server.bat
+start-simple.bat
 ```
 
 **2. Start Frontend:**
@@ -51,7 +51,6 @@ npm start
 
 ### Backend Requirements
 - Python 3.8 or higher
-- OpenAI API key
 
 ## 🛠️ Setup Instructions
 
@@ -63,14 +62,9 @@ cd Backend
 # Install Python dependencies
 pip install -r requirements.txt
 
-# Create environment file
-echo OPENAI_API_KEY=your_openai_api_key_here > .env
-
 # Start the server
-start-server.bat
+start-simple.bat
 ```
-
-**Important**: Get your OpenAI API key from [OpenAI Platform](https://platform.openai.com/api-keys)
 
 ### 2. Frontend Setup
 
@@ -116,9 +110,6 @@ npm start
 
 ## 🔧 Configuration
 
-### Environment Variables
-- `OPENAI_API_KEY` - Your OpenAI API key (required)
-
 ### CORS Settings
 - Frontend: `http://localhost:3000`
 - Backend: `http://localhost:5000`
@@ -127,7 +118,7 @@ npm start
 
 The application includes comprehensive error handling:
 - **Input Validation** - Checks for empty text and length limits
-- **API Error Handling** - Graceful handling of OpenAI API errors
+- **Model Error Handling** - Handles summarization errors
 - **Network Error Handling** - Connection issues between frontend and backend
 
 ## 📁 Project Structure
@@ -137,7 +128,7 @@ SumAI/
 ├── Backend/
 │   ├── summ.py              # FastAPI application
 │   ├── requirements.txt     # Python dependencies
-│   ├── start-server.bat    # Backend startup script
+│   ├── start-simple.bat    # Backend startup script
 │   └── README.md           # Backend documentation
 ├── Frontend/
 │   └── sumai/
@@ -153,7 +144,7 @@ SumAI/
 ### Backend Issues
 1. **Python not found**: Install Python from [python.org](https://python.org)
 2. **Missing dependencies**: Run `pip install -r requirements.txt`
-3. **API key error**: Add your OpenAI API key to `.env` file
+3. **Server not starting**: Make sure start-simple.bat is present
 
 ### Frontend Issues
 1. **Node.js not found**: Install Node.js from [nodejs.org](https://nodejs.org)
@@ -163,7 +154,6 @@ SumAI/
 ### Connection Issues
 1. **Backend not responding**: Ensure backend is running on port 5000
 2. **CORS errors**: Check that both servers are running
-3. **API errors**: Verify your OpenAI API key is valid
 
 ## 🚀 Production Deployment
 
@@ -194,4 +184,4 @@ This project is open source and available under the MIT License.
 
 ---
 
-**Built with ❤️ using React, FastAPI, and OpenAI** 
+**Built with ❤️ using React, FastAPI, Hugging Face BART Model** 
