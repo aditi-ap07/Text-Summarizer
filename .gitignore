@@ -1,0 +1,55 @@
+# ----------------------------
+# FRONTEND - Node.js / React
+# ----------------------------
+
+# dependencies
+/Frontend/node_modules
+/Frontend/.pnp
+/Frontend/.pnp.js
+
+# testing
+/Frontend/coverage
+
+# production
+/Frontend/build
+
+# misc
+/Frontend/.DS_Store
+/Frontend/.env.local
+/Frontend/.env.development.local
+/Frontend/.env.test.local
+/Frontend/.env.production.local
+
+/Frontend/npm-debug.log*
+/Frontend/yarn-debug.log*
+/Frontend/yarn-error.log*
+
+# ----------------------------
+# BACKEND - Python / Flask / FastAPI
+# ----------------------------
+
+# Python cache
+/Backend/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+/Backend/env/
+Backend/venv/
+
+# Environment variables
+/Backend/.env
+
+# Models
+/Backend/*.pt
+/Backend/*.bin
+/Backend/*.h5
+
+# Editor / OS files
+/Backend/.vscode/
+Backend/.idea/
+Backend/.DS_Store
+
+
+/Backend/models/
